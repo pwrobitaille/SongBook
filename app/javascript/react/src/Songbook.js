@@ -11,7 +11,7 @@ class Songbook extends Component {
   render(){
     return(
       <div>
-        hello
+        <a href="/auth/google">Login to Google</a>
       </div>
 
     )
