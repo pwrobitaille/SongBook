@@ -1,4 +1,8 @@
 import React, { Component } from 'react'
+import { browserHistory, Route, Switch } from 'react-router-dom';
+import UserHomePage from './components/UserHomePage'
+
+
 
 class Songbook extends Component {
   constructor(props) {
@@ -12,6 +16,11 @@ class Songbook extends Component {
     return(
       <div>
         <a href="/auth/google">Login to Google</a>
+        <Switch>
+          <Route exact path='/users/:id' component={UserHomePage} />
+          <Route path='/' component={Songbook}/>
+
+        </Switch>
       </div>
 
     )
