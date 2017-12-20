@@ -12,7 +12,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'listen'
 gem "font-awesome-rails"
 gem 'coffee-rails', '~> 4.2'
-
+gem 'omniauth-google-oauth2'
+gem 'figaro'
 
 
 gem 'teaspoon-jasmine'
