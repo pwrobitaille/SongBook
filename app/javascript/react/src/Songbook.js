@@ -1,5 +1,9 @@
 import React, { Component } from 'react'
 import { browserHistory, Route, Switch } from 'react-router-dom';
+import AddSong from './components/AddSong'
+import UserHomePage from './components/UserHomePage'
+import Home from './components/Home'
+
 
 class Songbook extends Component {
   constructor(props) {
@@ -12,9 +16,11 @@ class Songbook extends Component {
   render(){
     return(
       <div>
-        <a href="/auth/google">Login to Google</a>
-        {/* <Route exact path='/users/:id' component={Songbook} /> */}
-
+        <Switch>
+          <Route exact path='/users/:id/add-song' component={AddSong} />
+          <Route exact path='/users/:id' component={UserHomePage} />
+          <Route path='/' component={Home} />
+        </Switch>
       </div>
 
     )
